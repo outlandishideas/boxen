@@ -2,6 +2,8 @@ require boxen::environment
 require homebrew
 require gcc
 
+# resource defaults
+
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
@@ -49,6 +51,8 @@ Service {
 
 Homebrew::Formula <| |> -> Package <| |>
 
+# node definitions
+
 node default {
 	# core modules, needed for most things
 	include dnsmasq
@@ -60,51 +64,29 @@ node default {
 		fail('Please enable full disk encryption and try again')
 	}
 	
-	#include php::5_4
-	#include mysql
 	#include php::composer
-	#include php::fpm::5_4_17
 	php::extension::xdebug { 'xdebug for 5.4.17':
 	    php     => '5.4.17'
 	}
 
 	include phpmyadmin
 
-	#include chrome
-	#class { 'phpstorm':
-	#	version => '7.1.3'
-	#}
-	#include phpstorm
-	#include vagrant
-	#include alfred
-	#include virtualbox
-	#include firefox
-	include iterm2::stable
-	include textmate::textmate2::release
-
-	#include cyberduck
-	#include dropbox
-
 	include projects::watson
-
 	outlandish::project{'unitlist':}
-
 	include projects::jericho
 	
 	include brewcask
 	
 	package {
-		['google-chrome', 'phpstorm', 'cyberduck', 'dropbox', 'firefox', 'launchcontrol']:
-			provider => 'brewcask'
+		['clipmenu', 'iterm2', 'textmate', 'google-chrome', 'phpstorm', 'cyberduck', 
+		'dropbox', 'firefox', 'launchcontrol']:
+			provider => 'brewcask',
+			require => Class['brewcask']
 		}
 
   # common, useful packages
   package {
-    [
-      'ack',
-      'findutils',
-      'gnu-tar'
-    ]:
+    ['ack', 'findutils', 'gnu-tar']:
   }
 
   file { "${boxen::config::srcdir}/our-boxen":
