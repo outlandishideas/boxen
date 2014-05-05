@@ -1,0 +1,6 @@
+---
+
+# See https://github.com/boxen/puppet-java for docs
+java::update_version: 51
+
+mysql::config::port: 3306

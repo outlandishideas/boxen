@@ -1,12 +1,54 @@
+GIT
+  remote: git://github.com/phinze/puppet-brewcask.git
+  ref: master
+  sha: 9e4147b92997a984bc26f991289b68fd0fe3d52a
+  specs:
+    brewcask (0.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-alfred
+  specs:
+    alfred (1.1.8)
+
+GITHUBTARBALL
+  remote: boxen/puppet-autoconf
+  specs:
+    autoconf (1.0.0)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.4.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-cyberduck
+  specs:
+    cyberduck (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-dropbox
+  specs:
+    dropbox (1.2.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-firefox
+  specs:
+    firefox (1.1.8)
+
+GITHUBTARBALL
+  remote: boxen/puppet-fish
+  specs:
+    fish (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -39,6 +81,26 @@ GITHUBTARBALL
     hub (1.3.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-iterm2
+  specs:
+    iterm2 (1.0.7)
+
+GITHUBTARBALL
+  remote: boxen/puppet-libpng
+  specs:
+    libpng (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-libtool
+  specs:
+    libtool (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mysql
+  specs:
+    mysql (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.4.3)
@@ -54,9 +116,29 @@ GITHUBTARBALL
     openssl (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-osx
+  specs:
+    osx (2.2.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-pcre
+  specs:
+    pcre (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (2.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-php
+  specs:
+    php (1.1.5)
+
+GITHUBTARBALL
+  remote: boxen/puppet-phpstorm
+  specs:
+    phpstorm (1.0.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-pkgconfig
@@ -74,9 +156,34 @@ GITHUBTARBALL
     ruby (7.2.4)
 
 GITHUBTARBALL
+  remote: boxen/puppet-spotify
+  specs:
+    spotify (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-textmate
+  specs:
+    textmate (1.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vagrant
+  specs:
+    vagrant (3.0.7)
+
+GITHUBTARBALL
+  remote: boxen/puppet-virtualbox
+  specs:
+    virtualbox (1.0.9)
+
+GITHUBTARBALL
+  remote: boxen/puppet-wget
+  specs:
+    wget (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -98,9 +205,23 @@ GITHUBTARBALL
   specs:
     module-data (0.0.3)
 
+GITHUBTARBALL
+  remote: technicalpickles/puppet-flux
+  specs:
+    flux (0.0.1)
+
 DEPENDENCIES
+  alfred (>= 0)
+  autoconf (= 1.0.0)
   boxen (= 3.4.2)
+  brewcask (>= 0)
+  chrome (>= 0)
+  cyberduck (>= 0)
   dnsmasq (= 1.0.1)
+  dropbox (>= 0)
+  firefox (>= 0)
+  fish (>= 0)
+  flux (= 0.0.1)
   foreman (= 1.2.0)
   gcc (= 2.0.100)
   git (= 2.2.2)
@@ -108,15 +229,28 @@ DEPENDENCIES
   homebrew (= 1.6.1)
   hub (= 1.3.0)
   inifile (= 1.0.3)
+  iterm2 (>= 0)
+  libpng (= 1.0.0)
+  libtool (>= 0)
   module-data (= 0.0.3)
+  mysql (= 1.2.0)
   nginx (= 1.4.3)
   nodejs (= 3.7.0)
   openssl (= 1.0.0)
+  osx (>= 0)
+  pcre (= 1.0.0)
   phantomjs (= 2.1.0)
+  php (= 1.1.5)
+  phpstorm (>= 0)
   pkgconfig (= 1.0.0)
   repository (= 2.3.0)
   ruby (= 7.2.4)
+  spotify (>= 0)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
+  textmate (>= 0)
+  vagrant (>= 0)
+  virtualbox (>= 0)
+  wget (= 1.0.1)
   xquartz (= 1.1.1)
 
