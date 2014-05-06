@@ -58,22 +58,24 @@ node default {
 	include dnsmasq
 	include git
 	include nginx
+	
+	include mysql
 
 	# fail if FDE is not enabled
-	if $::root_encrypted == 'no' {
-		fail('Please enable full disk encryption and try again')
-	}
+	#if $::root_encrypted == 'no' {
+	#	fail('Please enable full disk encryption and try again')
+	#}
 	
 	#include php::composer
 	php::extension::xdebug { 'xdebug for 5.4.17':
 	    php     => '5.4.17'
 	}
 
-	include phpmyadmin
+	#include phpmyadmin
 
-	include projects::watson
-	outlandish::project{'unitlist':}
-	include projects::jericho
+	#include projects::watson
+	#outlandish::project{'unitlist':}
+	#include projects::jericho
 	
 	include brewcask
 	
