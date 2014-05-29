@@ -59,7 +59,7 @@ node default {
 	include git
 	include nginx
 	
-	include mysql
+	#include mysql
 
 	# fail if FDE is not enabled
 	#if $::root_encrypted == 'no' {
@@ -67,9 +67,9 @@ node default {
 	#}
 	
 	#include php::composer
-	php::extension::xdebug { 'xdebug for 5.4.17':
-	    php     => '5.4.17'
-	}
+	#php::extension::xdebug { 'xdebug for 5.4.17':
+	#    php     => '5.4.17'
+	#}
 
 	#include phpmyadmin
 
